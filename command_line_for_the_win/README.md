@@ -25,7 +25,7 @@ Participation in this project is completely optional. There is no penalty for de
 **Helpful Resources:**
 
 - [SFTP Guide](https://man.openbsd.org/sftp)
-- [SFTP File Transfer Tutorial] (https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
+- [SFTP File Transfer Tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
 
 **Step-by-Step Guide:**
 
