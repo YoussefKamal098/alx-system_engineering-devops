@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# print "Best School" 10 times and in the 9th line print "Hi"
+
+n=0
+
+while [ $n -lt 11 ]
+do
+  if [ $n -eq 9 ]
+  then
+    echo "Hi"
+  else
+    echo "Best School"
+  fi
+
+  ((n++))
+done
