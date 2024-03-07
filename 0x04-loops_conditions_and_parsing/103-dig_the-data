@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# parses an Apache log files and to IP and HTTP code
+# for each visitor along with the number of occurrences.
+
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
