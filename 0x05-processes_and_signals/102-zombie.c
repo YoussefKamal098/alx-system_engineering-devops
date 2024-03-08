@@ -26,8 +26,6 @@ int main(void)
 	pid_t pid;
 	char count = 0;
 
-	printf("START\n");
-
 	while (count < 5)
 	{
 		pid = fork();
@@ -48,7 +46,7 @@ int main(void)
 			exit(EXIT_SUCCESS);
 	}
 
-	printf("END\n");
+	infinite_while();
 
 	return (EXIT_SUCCESS);
 }
