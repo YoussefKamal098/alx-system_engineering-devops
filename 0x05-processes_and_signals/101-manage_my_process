@@ -27,7 +27,7 @@ function start_process() {
 function main() {
   if [ "${1}" == "start" ]
   then
-      start_process "start"
+      start_process "started"
   elif [ "${1}" == "stop" ]
   then
       echo "manage_my_process stopped"
@@ -37,7 +37,7 @@ function main() {
   then
       kill "$(cat /var/run/my_process.pid)"
       rm /var/run/my_process.pid
-      start_process "restart"
+      start_process "restarted"
   else
       echo "Usage: manage_my_process {start|stop|restart}"
   fi
