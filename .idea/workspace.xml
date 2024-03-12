@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a0958ea-a04b-41c5-bbc5-59027c26670c" name="Changes" comment="5-beginning_and_end.rb, 6-phone_number.rb, 7-OMG_WHY_ARE_YOU_SHOUTING.rb" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2dN6DjlsAnzbhTICGYz2BiwYvYl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/youssef-samuel/Desktop/alx-system_engineering-devops&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/0x06-regular_expressions" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a0958ea-a04b-41c5-bbc5-59027c26670c" name="Changes" comment="" />
+      <created>1709836070171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709836070171</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update 1-for_best_school">
+      <created>1709837621424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709837621424</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2-while_best_school">
+      <created>1709837947197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709837947197</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2-while_best_school">
+      <created>1709837964918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709837964918</updated>
+    </task>
+    <task id="LOCAL-00008" summary="3-until_best_school">
+      <created>1709838263250</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709838263250</updated>
+    </task>
+    <task id="LOCAL-00009" summary="4-if_9_say_hi">
+      <created>1709838639704</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709838639704</updated>
+    </task>
+    <task id="LOCAL-00010" summary="5-4_bad_luck_8_is_your_chance">
+      <created>1709838919019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709838919019</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update 5-4_bad_luck_8_is_your_chance">
+      <created>1709838989462</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709838989462</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update 5-4_bad_luck_8_is_your_chance">
+      <created>1709839112179</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709839112179</updated>
+    </task>
+    <task id="LOCAL-00013" summary="6-superstitious_numbers">
+      <created>1709839466134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709839466134</updated>
+    </task>
+    <task id="LOCAL-00014" summary="7-clock">
+      <created>1709839931318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709839931318</updated>
+    </task>
+    <task id="LOCAL-00015" summary="8-for_is">
+      <created>1709840627047</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709840627047</updated>
+    </task>
+    <task id="LOCAL-00016" summary="9-to_file_or_not_to_file">
+      <created>1709841210302</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709841210302</updated>
+    </task>
+    <task id="LOCAL-00017" summary="10-fizzbuzz">
+      <created>1709841549266</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709841549266</updated>
+    </task>
+    <task id="LOCAL-00018" summary="100-read_and_cut">
+      <created>1709842205503</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1709842205503</updated>
+    </task>
+    <task id="LOCAL-00019" summary="101-tell_the_story_of_passwd">
+      <created>1709842563209</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709842563209</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update 101-tell_the_story_of_passwd">
+      <created>1709842665016</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709842665016</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update 101-tell_the_story_of_passwd">
+      <created>1709842779056</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1709842779056</updated>
+    </task>
+    <task id="LOCAL-00022" summary="102-lets_parse_apache_logs">
+      <created>1709843081922</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1709843081922</updated>
+    </task>
+    <task id="LOCAL-00023" summary="103-dig_the-data">
+      <created>1709843384699</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1709843384699</updated>
+    </task>
+    <task id="LOCAL-00024" summary="0-what-is-my-pid">
+      <created>1709922730339</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922730339</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update 0-what-is-my-pid">
+      <created>1709922827621</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922827621</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update 0-what-is-my-pid">
+      <created>1709922880743</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709922880743</updated>
+    </task>
+    <task id="LOCAL-00027" summary="1-list_your_processes">
+      <created>1709923065802</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923065802</updated>
+    </task>
+    <task id="LOCAL-00028" summary="2-show_your_bash_pid">
+      <created>1709923397295</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923397295</updated>
+    </task>
+    <task id="LOCAL-00029" summary="3-show_your_bash_pid_made_easy">
+      <created>1709923628195</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923628195</updated>
+    </task>
+    <task id="LOCAL-00030" summary="4-to_infinity_and_beyond">
+      <created>1709923797187</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923797187</updated>
+    </task>
+    <task id="LOCAL-00031" summary="5-dont_stop_me_now">
+      <created>1709923950408</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923950408</updated>
+    </task>
+    <task id="LOCAL-00032" summary="6-stop_me_if_you_can">
+      <created>1709924066827</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1709924066827</updated>
+    </task>
+    <task id="LOCAL-00033" summary="7-highlander">
+      <created>1709924260174</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1709924260174</updated>
+    </task>
+    <task id="LOCAL-00034" summary="8-beheaded_process">
+      <created>1709924401361</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1709924401361</updated>
+    </task>
+    <task id="LOCAL-00035" summary="100-process_and_pid_file">
+      <created>1709924919825</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709924919825</updated>
+    </task>
+    <task id="LOCAL-00036" summary="101-manage_my_process">
+      <created>1709930432902</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709930432902</updated>
+    </task>
+    <task id="LOCAL-00037" summary="manage_my_process">
+      <created>1709930577609</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1709930577609</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update 101-manage_my_process">
+      <created>1709930700565</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1709930700565</updated>
+    </task>
+    <task id="LOCAL-00039" summary="102-zombie.c">
+      <created>1709931928914</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1709931928914</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update 102-zombie.c">
+      <created>1709932206914</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1709932206914</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update 101-manage_my_process">
+      <created>1709972091719</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1709972091719</updated>
+    </task>
+    <task id="LOCAL-00042" summary="update 101-manage_my_process">
+      <created>1709972174975</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1709972174975</updated>
+    </task>
+    <task id="LOCAL-00043" summary="0-simply_match_school.rb">
+      <created>1710247627823</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710247627823</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update 0-simply_match_school.rb">
+      <created>1710247949294</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1710247949294</updated>
+    </task>
+    <task id="LOCAL-00045" summary="1-repetition_token_0.rb">
+      <created>1710248148311</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248148311</updated>
+    </task>
+    <task id="LOCAL-00046" summary="update 1-repetition_token_0.rb">
+      <created>1710248301087</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248301087</updated>
+    </task>
+    <task id="LOCAL-00047" summary="2-repetition_token_1.rb">
+      <created>1710248437865</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248437865</updated>
+    </task>
+    <task id="LOCAL-00048" summary="3-repetition_token_2.rb">
+      <created>1710248554192</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248554192</updated>
+    </task>
+    <task id="LOCAL-00049" summary="3-repetition_token_2.rb">
+      <created>1710248606888</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248606888</updated>
+    </task>
+    <task id="LOCAL-00050" summary="update 3-repetition_token_2.rb">
+      <created>1710248653917</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248653917</updated>
+    </task>
+    <task id="LOCAL-00051" summary="4-repetition_token_3.rb">
+      <created>1710248813667</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1710248813667</updated>
+    </task>
+    <task id="LOCAL-00052" summary="5-beginning_and_end.rb">
+      <created>1710249093336</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1710249093336</updated>
+    </task>
+    <task id="LOCAL-00053" summary="5-beginning_and_end.rb, 6-phone_number.rb, 7-OMG_WHY_ARE_YOU_SHOUTING.rb">
+      <created>1710249568427</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1710249568427</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update 0-what-is-my-pid" />
+    <MESSAGE value="1-list_your_processes" />
+    <MESSAGE value="2-show_your_bash_pid" />
+    <MESSAGE value="3-show_your_bash_pid_made_easy" />
+    <MESSAGE value="4-to_infinity_and_beyond" />
+    <MESSAGE value="5-dont_stop_me_now" />
+    <MESSAGE value="6-stop_me_if_you_can" />
+    <MESSAGE value="7-highlander" />
+    <MESSAGE value="8-beheaded_process" />
+    <MESSAGE value="100-process_and_pid_file" />
+    <MESSAGE value="101-manage_my_process" />
+    <MESSAGE value="manage_my_process" />
+    <MESSAGE value="102-zombie.c" />
+    <MESSAGE value="update 102-zombie.c" />
+    <MESSAGE value="update 101-manage_my_process" />
+    <MESSAGE value="0-simply_match_school.rb" />
+    <MESSAGE value="update 0-simply_match_school.rb" />
+    <MESSAGE value="1-repetition_token_0.rb" />
+    <MESSAGE value="update 1-repetition_token_0.rb" />
+    <MESSAGE value="2-repetition_token_1.rb" />
+    <MESSAGE value="3-repetition_token_2.rb" />
+    <MESSAGE value="update 3-repetition_token_2.rb" />
+    <MESSAGE value="4-repetition_token_3.rb" />
+    <MESSAGE value="5-beginning_and_end.rb" />
+    <MESSAGE value="5-beginning_and_end.rb, 6-phone_number.rb, 7-OMG_WHY_ARE_YOU_SHOUTING.rb" />
+    <option name="LAST_COMMIT_MESSAGE" value="5-beginning_and_end.rb, 6-phone_number.rb, 7-OMG_WHY_ARE_YOU_SHOUTING.rb" />
+  </component>
+</project>
