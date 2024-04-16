@@ -1,4 +1,6 @@
-1. **Servers**:
+# Secured_and_monitored_web_infrastructure
+
+1**Servers**:
    - Server 1: Hosts the Nginx web server and serves as the load balancer.
    - Server 2: Hosts the application server.
    - Server 3: Hosts the MySQL database.

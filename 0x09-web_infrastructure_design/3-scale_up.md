@@ -1,4 +1,4 @@
-In this setup, we'll design a scalable web infrastructure with separate components for the web server, application server, and database, along with a load balancer to distribute traffic.
+# Scale up
 
 1. **Server**:
    - Purpose: The server acts as the host for the various components of the web infrastructure.

@@ -1,3 +1,5 @@
+# Distributed web infrastructure
+
 1. **Servers**:
    - Server 1: Hosts the Nginx web server.
    - Server 2: Hosts the application server and MySQL database.
