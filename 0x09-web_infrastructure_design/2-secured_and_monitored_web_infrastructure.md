@@ -1,4 +1,6 @@
-# Secured_and_monitored_web_infrastructure
+# Secured and monitored web infrastructure
+
+![Secured and monitored web infrastructure](./2-secured_and_monitored_web_infrastructure.png)
 
 1**Servers**:
    - Server 1: Hosts the Nginx web server and serves as the load balancer.

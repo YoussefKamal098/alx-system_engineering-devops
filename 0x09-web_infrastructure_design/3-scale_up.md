@@ -1,5 +1,7 @@
 # Scale up
 
+![Scale up](./3-scale_up.png)
+
 1. **Server**:
    - Purpose: The server acts as the host for the various components of the web infrastructure.
    - Explanation: A single server is used to host all the components, providing the necessary computing resources for running the web server, application server, and database.
