@@ -1,5 +1,7 @@
 # Simple web stack
 
+[Simple web stack](./0-simple_web_stack.png)
+
 1. **Server**:
    - Purpose: The server hosts all components of the web infrastructure, including the web server, application server, and database.
    - Explanation: A server is a computer system or device that provides resources, services, or data to other computers or clients over a network.
