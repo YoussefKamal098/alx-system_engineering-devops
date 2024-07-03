@@ -1,0 +1,11 @@
+# Matches all remote hosts (unless overridden by specific entries)
+Host *
+
+# Use private key file for authentication (assuming ~/.ssh/school exists)
+IdentityFile ~/.ssh/school
+
+# Disable password authentication (since key is used)
+PasswordAuthentication no
+
+# Disable host-based authentication (simplifies configuration)
+HostbasedAuthentication no
