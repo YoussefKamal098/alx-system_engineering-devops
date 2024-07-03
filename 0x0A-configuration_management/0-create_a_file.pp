@@ -4,6 +4,6 @@ file { 'school':
     path    => '/tmp/school',
     content => 'I love Puppet',
     mode    => '0744',
-    user    => www-data,
+    owner    => 'www-data',
     group   => 'www-data',
 }
