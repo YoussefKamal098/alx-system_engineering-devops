@@ -5,6 +5,8 @@ sudo apt-get update -y && sudo apt-get install nginx -y
 # Start nginx service
 sudo service nginx start
 
+sudo chown -R $USER:$USER /var/www/
+
 # Create index.html with "Hello World!"
 echo "Hello World!" > /var/www/html/index.html
 
