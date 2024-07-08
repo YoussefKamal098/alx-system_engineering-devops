@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Update package index
 apt-get update -y > /dev/null 2>&1
 
