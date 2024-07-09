@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Configures a new ubuntu machine by installing
+# Nginx where it should be listening on port 80
+# Serve a page that would return a Hello World string
+
+sudo apt-get update -y && sudo apt-get install nginx -y
+
+# starting nginx service
+sudo service nginx start
+
+# allowing nginx on firewall
+sudo ufw allow 'Nginx HTTP'
+
+# Give the user ownership to website files for easy editing
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# Creating new index
+echo  "Hello World!" > /var/www/html/index.html
+
+# Setting up /redirect_me to a youtube video
+sudo sed -i 's/^server\s*{\s*$/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/sites-available/default
+
+# Set up a 404 page
+echo "Ceci n'est pas une page" > /var/www/html/error_404.html
+sudo sed -i 's/^server\s*{\s*$/server {\n\terror_page 404 \/error_404.html;\n\tlocation = \/error_404.html {\n\t\tinternal;\n\t}/' /etc/nginx/sites-available/default
+
+# add header_snippet to server block
+sudo sed -i "s/^server\s*{\s*$/server {\n\tadd_header X-Served-By \"$(hostname)\";/" /etc/nginx/sites-available/default
+
+# Test Nginx configuration for syntax errors
+sudo nginx -t
+
+# Restarting nginx
+sudo service nginx restart
