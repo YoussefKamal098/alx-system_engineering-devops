@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Install HAProxy
+sudo apt-get update -y && sudo apt-get install -y haproxy  # update system then Installs HAProxy using 'apt-get' with the '-y' flag for automatic 'yes' to prompts
+
+# Enable HAProxy service on system boot
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy  # Appends "ENABLED=1" to the end of the `/etc/default/haproxy` file. This likely enables the HAProxy service to start automatically during system boot.
+
+# Configure HAProxy
+cat <<EOF | sudo tee -a /etc/haproxy/haproxy.cfg
+# This block defines the HAProxy configuration
+
+frontend realyousam.tech  # Defines a frontend named "realyousam.tech"
+  bind *:80                     # Listens for traffic on all interfaces (":*") on port 80 (default HTTP port)
+  timeout client 30s            # Sets a timeout of 30 seconds for clients that don't respond
+  mode http                     # Operates in HTTP mode (Layer 7) for handling web traffic
+  default_backend realyousam.tech_backend  # Sets the default backend for this frontend
+
+backend realyousam.tech_backend  # Defines a backend named "realyousam.tech_backend"
+  timeout connect 3s           # Sets a timeout of 3 seconds for establishing connections to backend servers
+  timeout server 30s            # Sets a timeout of 30 seconds for responses from backend servers
+  balance roundrobin             # Uses round-robin load balancing to distribute traffic among servers
+  mode http                     # Operates in HTTP mode (Layer 7) for handling web traffic
+  server 333491-web-01 54.87.211.213:80 check  # Defines a server named "333491-web-01" with IP 54.87.211.213:80 and enables health checks
+  server 333491-web-02 54.160.67.123:80 check  # Defines a server named "333491-web-02" with IP 54.160.67.123:80 and enables health checks
+EOF
+
+# The -c option tells HAProxy to check the configuration file without actually starting the service
+# The -f option specifies the path to the configuration file.
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+# Restart HAProxy service
+sudo service haproxy restart  # Restarts the HAProxy service to apply the new configuration
