@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# This script checks DNS records for a given domain and subdomains.
+
+# Function to check the DNS record of a subdomain for a domain name
+dns_config() {
+  #  $1 - Domain name
+  #  $2 - Subdomain to check
+
+  # Build the query using the subdomain and domain name
+  line=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
+
+  # Combine the subdomain with the parsed record information
+  echo "$2 $line" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+}
+
+# Check if exactly one argument (domain name) is provided
+if [ $# -eq 1 ]
+then
+  # Check predefined subdomains (www, lb-01, web-01, web-02)
+  dns_config "$1" "www"
+  dns_config "$1" "lb-01"
+  dns_config "$1" "web-01"
+  dns_config "$1" "web-02"
+elif [ $# -eq 2 ]
+then
+  # Check the provided subdomain for the given domain
+  dns_config "$1" "$2"
+fi
