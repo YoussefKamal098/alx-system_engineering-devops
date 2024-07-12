@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Modify default Nginx configuration file (careful with editing system files)
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+
+# Restart Nginx service to apply changes
+service nginx restart
+
+# Kill any leftover Nginx processes (optional, use with caution)
+pkill -o nginx

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Creates a symbolic link to the default Nginx configuration file
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restarts the Nginx service to apply the linked configuration
+sudo service nginx restart
