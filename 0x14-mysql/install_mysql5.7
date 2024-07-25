@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# This script installs MySQL 5.7 on the server
+
+# Update package list
+sudo apt-get update -y
+
+# Download the MySQL 5.7 installation script
+echo "Downloading MySQL 5.7 installation script..."
+# see documentation for wget: https://www.gnu.org/software/wget/manual/wget.html
+# see documentation for MySQL 5.7 installation process https://docs.google.com/document/d/1btVRofXP75Cj90_xq2x8AmzuMPOKq6D_Dt_SCDD6GrU/edit
+sudo wget -O mysql57 https://raw.githubusercontent.com/nuuxcode/alx-system_engineering-devops/master/scripts/mysql57
+
+# Make the script executable
+echo "Making the script executable..."
+sudo chmod +x mysql57
+
+# Run the MySQL 5.7 installation script
+echo "Running the MySQL 5.7 installation script..."
+sudo ./mysql57
+
+# Secure MySQL installation
+echo "Securing MySQL installation..."
+sudo mysql_secure_installation
+
+# Check MySQL status
+echo "Checking MySQL status..."
+sudo systemctl status mysql
+
+# Display MySQL version to confirm installation
+echo "Displaying MySQL version..."
+mysql --version
+
+echo "MySQL 5.7 installation and setup completed."
