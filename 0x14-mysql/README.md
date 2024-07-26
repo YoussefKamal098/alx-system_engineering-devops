@@ -1,3 +1,5 @@
+# Setting up a MySQL master-slave replication 
+
 Setting up a MySQL master-slave replication involves configuring one MySQL server to act as the master and another as the slave. The slave will replicate data changes from the master. Here’s a step-by-step guide to configuring MySQL master-slave replication:
 
 ### Prerequisites:
