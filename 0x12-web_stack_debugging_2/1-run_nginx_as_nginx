@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Set the permissions of the Nginx configuration file to read/write for owner, read-only for group and others
+chmod 644 /etc/nginx/nginx.conf
+# Update the Nginx configuration to ensure the user directive is set to "user nginx;"
+sed -Ei 's/\s*#?user .*/user nginx;/g' /etc/nginx/nginx.conf
+
+# Change the listen port from 80 to 8080 in the default Nginx site configuration
+sed -Ei 's/(listen (\[::\]:)?80) /\180 /' /etc/nginx/sites-enabled/default
+
+# Terminate all running Apache2 processes
+pkill apache2
+
+# Restart the Nginx service as the nginx user
+su nginx -s /bin/bash -c 'service nginx restart'
