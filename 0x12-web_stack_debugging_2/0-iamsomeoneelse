@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script runs the 'whoami' command as the user specified by the first argument ($1).
+
+# Usage:
+# ./script.sh username
+#
+# Example:
+# ./script.sh john
+# This will run 'whoami' as the user 'john', and print 'john' if the user 'john' exists and has the appropriate permissions.
+
+sudo -u "$1" whoami
