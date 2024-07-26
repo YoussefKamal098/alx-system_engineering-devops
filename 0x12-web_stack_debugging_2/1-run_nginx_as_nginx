@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Set the permissions of the Nginx configuration file to read/write for owner, read-only for group and others
 chmod 644 /etc/nginx/nginx.conf
 # Update the Nginx configuration to ensure the user directive is set to "user nginx;"
