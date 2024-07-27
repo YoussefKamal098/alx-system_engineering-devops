@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # backup and compress my databases
 
-# variables
+DUMP_FILE="backup.sql"
 DATE=$(date +%d-%m-%Y)
-file_name="${DATE}.tar.gz"
+ARCHIVE_FILE="${DATE}.tar.gz"
 
-mysqldump --all-databases -u root --password="$1" > backup.sql
-tar -czvf "$file_name" backup.sql
+mysqldump --all-databases -u root --password="$1" > "${DUMP_FILE}"
+tar -czvf "${ARCHIVE_FILE}" "${DUMP_FILE}"
 
 ##!/usr/bin/env bash
 ## Check if the correct number of arguments is provided
