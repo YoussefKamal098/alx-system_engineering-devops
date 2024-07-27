@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #!/usr/bin/env bash
- Check if the correct number of arguments is provided
+# Check if the correct number of arguments is provided
 if [ "$#" -ne 1 ]; then
   echo "Usage: $0 <mysql_root_password>"
   exit 1
