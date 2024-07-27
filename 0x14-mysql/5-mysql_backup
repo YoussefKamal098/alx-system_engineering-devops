@@ -30,10 +30,10 @@ tar -czvf "${ARCHIVE_FILE}" "${DUMP_FILE}"
 
 
 ## Check if the tar command was successful
-if [ $? -ne 0 ]; then
-  echo "Error: Failed to create compressed archive"
-  exit 1
-fi
+#if [ $? -ne 0 ]; then
+#  echo "Error: Failed to create compressed archive"
+#  exit 1
+#fi
 
 # Clean up the MySQL dump file
 rm "${DUMP_FILE}"
