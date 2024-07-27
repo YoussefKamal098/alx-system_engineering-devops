@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # backup and compress my databases
 
+MYSQL_ROOT_PASSWORD=$1
 DUMP_FILE="backup.sql"
 DATE=$(date +%d-%m-%Y)
 ARCHIVE_FILE="${DATE}.tar.gz"
 
-mysqldump --all-databases -u root --password="$1" > "${DUMP_FILE}"
+mysqldump -u root -p"${MYSQL_ROOT_PASSWORD}" --all-databases > "${DUMP_FILE}"
 tar -czvf "${ARCHIVE_FILE}" "${DUMP_FILE}"
 
 ##!/usr/bin/env bash
