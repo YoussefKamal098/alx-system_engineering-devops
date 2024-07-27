@@ -33,7 +33,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-## Clean up the MySQL dump file
-#rm "${DUMP_FILE}"
+# Clean up the MySQL dump file
+rm "${DUMP_FILE}"
 
 echo "Backup successful: ${ARCHIVE_FILE}"
