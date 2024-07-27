@@ -1,39 +1,51 @@
 #!/usr/bin/env bash
-# Check if the correct number of arguments is provided
-if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 <mysql_root_password>"
-  exit 1
-fi
+# backup and compress my databases
 
-# Assign the provided password to a variable
-MYSQL_ROOT_PASSWORD=$1
+# variables
+day=$(date +"%d")
+month=$(date +"%m")
+year=$(date +"%Y")
+file_name="$day-$month-$year.tar.gz"
 
-# Define the name for the MySQL dump file
-DUMP_FILE="backup.sql"
+mysqldump --all-databases -u root --password="$1" > backup.sql
+tar -czvf "$file_name" backup.sql
 
-# Define the name for the compressed archive file
-DATE=$(date +%d-%m-%Y)
-ARCHIVE_FILE="${DATE}.tar.gz"
-
-# Generate the MySQL dump containing all databases
-mysqldump -u root -p"${MYSQL_ROOT_PASSWORD}" --all-databases > "${DUMP_FILE}"
-
-# Check if the mysqldump command was successful
-if [ $? -ne 0 ]; then
-  echo "Error: Failed to create MySQL dump"
-  exit 1
-fi
-
-# Create a compressed archive of the MySQL dump file
-tar -czvf "${ARCHIVE_FILE}" "${DUMP_FILE}"
-
-# Check if the tar command was successful
-if [ $? -ne 0 ]; then
-  echo "Error: Failed to create compressed archive"
-  exit 1
-fi
-
-# Clean up the MySQL dump file
-rm "${DUMP_FILE}"
-
-echo "Backup successful: ${ARCHIVE_FILE}"
+##!/usr/bin/env bash
+## Check if the correct number of arguments is provided
+#if [ "$#" -ne 1 ]; then
+#  echo "Usage: $0 <mysql_root_password>"
+#  exit 1
+#fi
+#
+## Assign the provided password to a variable
+#MYSQL_ROOT_PASSWORD=$1
+#
+## Define the name for the MySQL dump file
+#DUMP_FILE="backup.sql"
+#
+## Define the name for the compressed archive file
+#DATE=$(date +%d-%m-%Y)
+#ARCHIVE_FILE="${DATE}.tar.gz"
+#
+## Generate the MySQL dump containing all databases
+#mysqldump -u root -p"${MYSQL_ROOT_PASSWORD}" --all-databases > "${DUMP_FILE}"
+#
+## Check if the mysqldump command was successful
+#if [ $? -ne 0 ]; then
+#  echo "Error: Failed to create MySQL dump"
+#  exit 1
+#fi
+#
+## Create a compressed archive of the MySQL dump file
+#tar -czvf "${ARCHIVE_FILE}" "${DUMP_FILE}"
+#
+## Check if the tar command was successful
+#if [ $? -ne 0 ]; then
+#  echo "Error: Failed to create compressed archive"
+#  exit 1
+#fi
+#
+## Clean up the MySQL dump file
+#rm "${DUMP_FILE}"
+#
+#echo "Backup successful: ${ARCHIVE_FILE}"
