@@ -38,6 +38,13 @@ binlog_do_db = your_database_name
     - `server-id = 1`: Each server in a replication setup must have a unique server ID.
     - `log_bin`: Specifies the location of the binary log files.
     - `binlog_do_db`: Limits the logging to specific databases (optional).
+    - **`pid-file = /var/run/mysqld/mysqld.pid`**: Path to the file where the process ID of the MySQL server is stored.
+    - **`socket = /var/run/mysqld/mysqld.sock`**: Path to the Unix socket file used for local connections.
+    - **`datadir = /var/lib/mysql`**: Directory where the MySQL database files are stored.
+    - **`log-error = /var/log/mysql/error.log`**: Path to the file where MySQL errors are logged.
+    - **`bind-address = 127.0.0.1`**: By default, MySQL only accepts connections from localhost. This setting restricts connections to the local machine only.
+    - **`symbolic-links = 0`**: Disables symbolic links to prevent various security risks associated with symbolic link vulnerabilities.
+
 
 **Step 2: Restart MySQL Service**
 
@@ -190,24 +197,35 @@ relay_log = /var/log/mysql/mysql-relay-bin.log
     ```bash
     tail -f /var/log/mysql/error.log
     ```
+## Example Configuration Files
 
-### Example Configuration Files
-
-**Master: `/etc/mysql/my.cnf`**
+**Master Configuration (`/etc/mysql/my.cnf` or `/etc/mysql/mysql.conf.d/mysqld.cnf`)**
 ```ini
 [mysqld]
 server-id = 1
 log_bin = /var/log/mysql/mysql-bin.log
-binlog_do_db = your_database_name
+binlog_do_db = tyrell_corp
+pid-file = /var/run/mysqld/mysqld.pid
+socket = /var/run/mysqld/mysqld.sock
+datadir = /var/lib/mysql
+log-error = /var/log/mysql/error.log
+bind-address = 127.0.0.1
+symbolic-links = 0
 ```
 
-**Slave: `/etc/mysql/my.cnf`**
+**Slave Configuration (`/etc/mysql/my.cnf` or `/etc/mysql/mysql.conf.d/mysqld.cnf `)**
 ```ini
 [mysqld]
 server-id = 2
 relay_log = /var/log/mysql/mysql-relay-bin.log
+pid-file = /var/run/mysqld/mysqld.pid
+socket = /var/run/mysqld/mysqld.sock
+datadir = /var/lib/mysql
+log-error = /var/log/mysql/error.log
+bind-address = 127.0.0.1
+symbolic-links = 0
 ```
 
 ### Conclusion
 
-Configuring MySQL master-slave replication involves setting up the master to log changes, creating a user for replication, and configuring the slave to replicate from the master. This setup enhances data availability and disaster recovery capabilities. Regular monitoring and maintenance are essential to ensure that replication continues to run smoothly and to address any issues that arise promptly.
+Configuring MySQL master-slave replication involves setting up the master to log changes, creating a replication user, and configuring the slave to replicate from the master. This setup enhances data availability and disaster recovery capabilities. Regular monitoring and maintenance are essential to ensure that replication continues to run smoothly and to address any issues that arise promptly.
