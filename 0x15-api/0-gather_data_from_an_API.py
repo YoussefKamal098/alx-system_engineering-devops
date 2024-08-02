@@ -22,8 +22,9 @@ Description:
 Example:
     python script_name.py 1
 """
-import sys
+
 import requests
+import sys
 
 
 def fetch_data(url):
