@@ -22,9 +22,9 @@ Example:
 The generated JSON file will be named with the current date and time.
 """
 from datetime import datetime
+import json
 import requests
 import sys
-import json
 
 
 def fetch_data(url):
