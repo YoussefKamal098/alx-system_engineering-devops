@@ -131,7 +131,7 @@ def export_to_json(
     with open(f'{filename}.json', 'w') as file:
         json.dump(all_tasks, file)
 
-    print(f"Tasks have been exported to {filename}.json")
+    # print(f"Tasks have been exported to {filename}.json")
 
 
 def main():
