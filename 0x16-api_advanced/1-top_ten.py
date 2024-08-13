@@ -28,4 +28,5 @@ def top_ten(subreddit):
         print(children.get("data").get("title"))
 
 
-top_ten('programming')
+if __name__ == '__main__':
+    top_ten('programming')

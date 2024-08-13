@@ -13,6 +13,19 @@ import requests
 
 
 def _count_words(search_words, word_list, word_count=[]):
+    """
+    Counts the occurrences of search words within a given word list.
+
+    Args:
+        search_words (list): A list of words to search for.
+        word_list (list): The list of words to be searched.
+        word_count (list, optional): An optional list to store word
+            counts. Defaults to an empty list.
+
+    Returns:
+        list: A list of word counts corresponding to
+            the words in the word_list.
+    """
     for i in range(len(word_list)):
         for word in search_words:
             word = word.lower()

@@ -28,10 +28,12 @@ def recurse(subreddit, hot_list=[], after=""):
     for children in response.json().get("data").get("children"):
         hot_list.append(children.get("data").get("title"))
 
-    print(after)
-
     after = response.json().get("data").get("after")
     if after is None:
         return hot_list
 
     return recurse(subreddit, hot_list, after)
+
+
+if __name__ == '__main__':
+    recurse('programming')
