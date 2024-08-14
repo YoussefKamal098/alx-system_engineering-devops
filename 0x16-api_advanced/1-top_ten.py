@@ -18,6 +18,7 @@ def top_ten(subreddit):
         "https://www.reddit.com/r/{}/hot.json".format(subreddit),
         headers={"User-Agent": "Linux"},
         params={"limit": 10},
+        allow_redirects=False
     )
 
     if response.status_code != 200:
