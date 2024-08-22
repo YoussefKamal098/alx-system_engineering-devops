@@ -18,7 +18,7 @@ kill -HUP "$MASTER_PID"
 
 # Check if the reload was successful by verifying the existence of new worker processes.
 # Wait a few seconds to allow the workers to restart.
-sleep 5
+# sleep 5
 
 # Verify that the new workers are running.
-ps auxf | grep gunicorn
+# ps auxf | grep gunicorn
