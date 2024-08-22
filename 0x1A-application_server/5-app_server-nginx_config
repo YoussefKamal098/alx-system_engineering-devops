@@ -62,34 +62,36 @@ server {
     location = /error_404.html {
         internal;
     }
-    # Proxy requests to /airbnb-onepage to a local Flask application running on port 5000
+    # Proxy requests to /airbnb-onepage to a local Flask application running on port 5000 (AirBnB_clone_v2)
     location = /airbnb-onepage/ {
         proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
     }
 
-    #Proxy requests to /number_odd_or_even/<n:int> to a local Flask application running on port 5001
+    #Proxy requests to /number_odd_or_even/<n:int> to a local Flask application running on port 5001  (AirBnB_clone_v2)
     location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
         proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
     }
 
-    #Proxy requests to /api/* to a local Flask application Restful api running on port 5002
+    #Proxy requests to /api/* to a local Flask application Restful api running on port 5002  (AirBnB_clone_v3)
     location /api {
         proxy_pass tp://127.0.0.1:5002/api;
     }
 
-    #Proxy requests to /2-hbnb to a local Flask application web_dynamic running on port 5003
+    #Proxy requests to /2-hbnb to a local Flask application web_dynamic running on port 5003 (AirBnB_clone_v4)
     location / {
         proxy_pass http://127.0.0.1:5003/2-hbnb;
+        try_files $uri $uri/ =404;
     }
 
-    # serve static content for Flask Application web_dynamic
-    location /static {
-        alias web_dynamic/static/;
-    }
+    # serve static content for Flask Application web_dynamic (AirBnB_clone_v4)
+     location /static/ {
+        alias /home/ubuntu/AirBnB_clone_v4/web_dynamic/static/;
+        try_files $uri $uri/ =404;
+     }
 
     # Handle requests to the root of the website
     #location / {
-    #   # Attempt to serve the request as a file, then as a directory,
+    #    # Attempt to serve the request as a file, then as a directory,
     #    # and if that fails, return a 404 error
     #    try_files $uri $uri/ =404;
     #}
