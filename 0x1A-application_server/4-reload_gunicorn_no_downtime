@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Find the PID of the Gunicorn master process.
+# `pgrep` finds processes matching the Gunicorn pattern.
+# `-o` selects the oldest matching process which is the master process.
+MASTER_PID=$(pgrep -o -f 'gunicorn')
+
+if [ -z "$MASTER_PID" ]; then
+    echo "Gunicorn master process not found."
+    exit 1
+fi
+
+# Print the PID of the master process for reference.
+echo "Found Gunicorn master PID: $MASTER_PID"
+
+# Send a HUP signal to the master process to gracefully reload workers.
+# Workers will be restarted one by one with the new configuration.
+kill -HUP "$MASTER_PID"
+
+# Check if the reload was successful by verifying the existence of new worker processes.
+# Wait a few seconds to allow the workers to restart.
+sleep 5
+
+# Verify that the new workers are running.
+ps auxf | grep gunicorn
