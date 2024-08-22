@@ -4,13 +4,13 @@
 # `-o` selects the oldest matching process which is the master process.
 MASTER_PID=$(pgrep -o -f 'gunicorn')
 
-if [ -z "$MASTER_PID" ]; then
-    echo "Gunicorn master process not found."
-    exit 1
-fi
+#if [ -z "$MASTER_PID" ]; then
+#    echo "Gunicorn master process not found."
+#    exit 1
+#fi
 
 # Print the PID of the master process for reference.
-echo "Found Gunicorn master PID: $MASTER_PID"
+#echo "Found Gunicorn master PID: $MASTER_PID"
 
 # Send a HUP signal to the master process to gracefully reload workers.
 # Workers will be restarted one by one with the new configuration.
