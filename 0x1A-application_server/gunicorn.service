@@ -1,0 +1,48 @@
+[Unit]
+Description=Gunicorn instance to serve web_dynamic/2-hbnb.py
+# Describes the service, providing a human-readable name for the unit.
+
+After=network.target
+# Ensures that this service starts only after the network is up.
+
+[Service]
+PermissionsStartOnly=true
+# Ensures that the permissions configuration is only applied to the start-up process, not to other actions like reload or stop.
+
+PIDFile=/run/hbnb/hbnb.pid
+# Specifies the file where the process ID (PID) of the Gunicorn server will be stored.
+
+User=ubuntu
+# Runs the service under the 'ubuntu' user account.
+
+Group=ubuntu
+# Runs the service under the 'ubuntu' group.
+
+WorkingDirectory=/home/ubuntu/AirBnB_clone_v4
+# Sets the working directory for the Gunicorn process.
+
+ExecStartPre=/bin/mkdir /run/hbnb
+# Creates the directory where the PID file will be stored before starting the service.
+
+ExecStartPre=/bin/chown -R ubuntu:ubuntu /run/hbnb
+# Changes the ownership of the directory to the 'ubuntu' user and group to ensure it is writable.
+
+ExecStart=gunicorn -w 3 --access-logfile /tmp/airbnb-access.log --error-logfile /tmp/airbnb-error.log --bind 0.0.0.0:5003 web_dynamic.2-hbnb:app --pid /run/hbnb/hbnb.pid
+# Starts the Gunicorn process with 3 worker processes, specifies log files for access and errors, binds the server to port 5003, and sets the PID file location.
+
+ExecReload=/bin/kill -s HUP $MAINPID
+# Sends a HUP signal to the main process to reload the Gunicorn configuration without stopping the server.
+
+ExecStop=/bin/kill -s TERM $MAINPID
+# Sends a TERM signal to the main process to gracefully stop the Gunicorn server.
+
+ExecStopPost=/bin/rm -rf /run/hbnb
+# Removes the PID file directory after the service has stopped.
+
+PrivateTmp=false
+# Disables the use of a private temporary directory for the service, meaning it will use the system-wide temporary directory.
+
+[Install]
+WantedBy=multi-user.target
+# Specifies that the service should be started during the system's multi-user run level, which is typically when most services are started.
+
